@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>SellOut</title>
+    <link rel="icon" type="image/x-icon" href="mainlogobgr.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Javascript -->
+    <script src="assets/img/jquery-3.3.1.min.js"></script>
+    <script src="assets/img/jquery-migrate-3.0.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="assets/img/jquery.backstretch.min.js"></script>
+    <script src="assets/img/wow.min.js"></script>
+    <script src="assets/img/jquery.waypoints.min.js"></script>
+    <script src="assets/img/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+
+    <!-- Wrapper -->
+    <div class="wrapper">
+
+        <!-- Sidebar -->
+        <nav class="sidebar">
+
+            <nav class="sidenavbar">
+                <h1>Hey Moviebuffs!</h1>
+            </nav>
+
+            <nav class="sidesubnavbar">
+                <img src="rewards.webp">
+                <p>Unlock special offers & great benefits</p>
+                <button class="login" onclick="document.getElementById('id01').style.display='block'">Login / Register</button>
+            </nav>
+
+            <a href="#">
+                <div class="lefticon">
+                    <ion-icon name="notifications-outline"></ion-icon>
+                </div>
+                <div class="text">Notifications</div>
+                <div class="righticon">
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                </div>
+            </a>
+            <a class="btn-disabled" href="#">
+                <div class="lefticon">
+                    <ion-icon name="ticket-outline"></ion-icon>
+                </div>
+                <div class="text">Purchase History<br>
+                    <div class="subtext">View all your bookings & Purchases</div>
+                </div>
+                <div class="righticon">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                </div>
+            </a>
+            <a href="#">
+                <div class="lefticon">
+                    <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+                </div>
+                <div class="text">Help & Support<br>
+                    <div class="subtext">View commonly asked queries and Chat</div>
+                </div>
+                <div class="righticon">
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                </div>
+            </a>
+            <a class="btn-disabled" href="#">
+                <div class="lefticon">
+                    <ion-icon name="settings-outline"></ion-icon>
+                </div>
+                <div class="text">Accounts & Settings<br>
+                    <div class="subtext">Location, Payments, Addresses & More</div>
+                </div>
+                <div class="righticon">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                </div>
+            </a>
+            <a href="#">
+                <div class="lefticon">
+                    <ion-icon name="gift-outline"></ion-icon>
+                </div>
+                <div class="text">Rewards<br>
+                    <div class="subtext">View your rewards & unlock new ones</div>
+                </div>
+                <div class="righticon">
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                </div>
+            </a>
+            <a href="#">
+                <div class="lefticon">
+                    <ion-icon name="heart-outline"></ion-icon>
+                </div>
+                <div class="text">BookASmile</div>
+                <div class="righticon">
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                </div>
+            </a>
+
+        </nav>
+        <!-- End sidebar -->
+
+        <!-- Dark overlay -->
+        <div class="overlay"></div>
+
+        <!-- Content -->
+        <div class="content">
+         <nav class="navbar">
+            <img src="ticketlogobgr.png" class="brand-logo" alt="" />
+                <div class='input'>
+                    <ion-icon name="search"></ion-icon>
+                    <input className='search'
+                        placeholder='Search for Movies, Events, Sports and Musicals'></input>
+                </div>
+                <!--<div id="1" class="sc-kxynE gLkGwh"><div id="2" class="sc-jTzLTM sc-chbbiW hPUYXB">
+                    <span id="3" class="sc-cooIXK hKlNgb"><svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                        <title>Search</title>
+                        <path d="M11.8 10.864L8.859 7.918a4.912 4.912 0 0 0-.444-6.47A4.888 4.888 0 0 0 4.928 0a4.888 4.888 0 0 0-3.485 1.449 4.942 4.942 0 0 0 0 6.979 4.888 4.888 0 0 0 3.485 1.449c1.052 0 2.105-.33 2.976-1.005l2.96 2.93a.658.658 0 0 0 .476.198.686.686 0 0 0 .477-.198.672.672 0 0 0-.016-.938zm-6.855-2.32c-.97 0-1.858-.38-2.549-1.054C1 6.09 1 3.802 2.396 2.387a3.578 3.578 0 0 1 2.549-1.054c.97 0 1.858.379 2.548 1.054s1.052 1.58 1.052 2.551c0 .971-.378 1.86-1.052 2.552a3.539 3.539 0 0 1-2.548 1.053z" fill="#777"></path>
+                    </svg>
+                </span>
+                <span id="4" class="sc-fcdeBU cNeUMt">Search for Movies, Events, Plays, Sports and Activities</span>
+            </div>
+        </div>-->
+                <div class="right-container">
+                    <a href="#" class="location">Coimbatore<ion-icon name="caret-down-sharp"></ion-icon></a>
+                    <button class="signin"
+                        onclick="document.getElementById('id01').style.display='block'">Sign in</button>
+
+                    <div id="id01" class="modal">
+
+                        <div class="modal-content">
+                            <div class="getstart">
+                                <h3>Get Started</h3>
+                                <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                                    title="Close Modal">
+                                    <ion-icon name="close-outline"></ion-icon>
+                                </span>
+                            </div>
+
+                            <div class="container">
+                                <a href="#" class="button">
+                                    <div class="logo">
+                                        <img src="googlelogo.svg">
+                                    </div>
+                                    <div class="text">Continue with Google</div>
+                                </a>
+                                <a href="#" class="button">
+                                    <div class="logo">
+                                        <ion-icon name="mail-outline" style="font-size: 22px;"></ion-icon>
+                                    </div>
+                                    <div class="text">Continue with Email</div>
+                                </a>
+                                <a href="#" class="button">
+                                    <div class="logo">
+                                        <ion-icon name="logo-apple" style="font-size: 22px;"></ion-icon>
+                                    </div>
+                                    <div class="text">Continue with Apple</div>
+                                </a>
+                            </div>
+                            <h2>OR</h2>
+
+                            <div class="phone">
+                                <img alt="indian flag" src="indianflag.svg">
+                                <div class="code">+91</div>
+                                <input id="mobileNo" type="tel" pattern="[0-9]*"
+                                    placeholder="Continue with mobile number" class="mobileNo">
+                            </div>
+
+                            <p>I agree to the <u>Terms & Conditions</u> and <u>Privacy Policy</u></p>
+
+                        </div>
+
+                    </div>
+
+                    <a href="#" class="btn-customized open-menu">
+                        <ion-icon name="menu-outline"></ion-icon>
+                    </a>
+                </div>
+            </nav>
+
+            <nav class="subnavbar">
+                <ul class='navitem'>
+                    <li><a href='#Movies'>Movies</a></li>
+                    <li><a href='#Movies'>Stream<span>NEW</span></a></li>
+                    <li><a href='#Movies'>Events</a></li>
+                    <li><a href='#Movies'>Sports</a></li>
+                    <li><a href='#Movies'>Activities</a></li>
+                    <li><a href='#Movies'>Buzz</a></li>
+                </ul>
+                <ul class='navitem1'>
+                    <li><a href='#Movies'>ListYourShow<span>NEW</span></a></li>
+                    <li><a href='#Movies'>Corporates</a></li>
+                    <li><a href='#Movies'>Offers</a></li>
+                    <li><a href='#Movies'>Gift Cards</a></li>
+                </ul>
+            </nav>
+            <br/>
+            <div class="carousel-container">
+                <div class="carousel">
+
+                </div>
+            </div>
+
+            <script src="data.js"></script>
+            <script src="app.js"></script>
+
+            <h1 class="title">Recommended Movies</h1>
+            <div class="movies-list">
+                <div class="card-container">
+
+                    <div class="movie">
+                        <div class="card">
+                          <a href="ponniyinselan.html"><img src="ponnipng.png" class="card-img" ></a>
+                            <div class="card-body">
+                                <ion-icon name="heart-sharp"></ion-icon>
+                                <p>265.7k likes &ThinSpace; </p>
+                            </div>
+                        </div>
+    
+                        <h3>Ponniyin Selvan-2</h3>
+                        <p class="detail">Drama/Action/Adventure/Historical</p>
+                    </div>
+
+                    <div class="movie">
+                        <div class="card">
+                            <a href="vidu.html"><img src="viduthalai.jpg" class="card-img" ></a>
+                            <div class="card-body">
+                                <ion-icon name="heart-sharp"></ion-icon>
+                                <p> 265.75k likes&ThinSpace; </p>
+                            </div>
+                        </div>
+                        <h3>Viduthalai</h3>
+                        <p class="detail">Action/Crime/Drama</p>
+                    </div>
+
+                    <div class="movie">
+                        <div class="card">
+                            <a href="Evildeadrise.html"><img src="evilriselogo.jpg" class="card-img-evil" ></a>
+                            <div class="card-body">
+                                <ion-icon name="thumbs-up-sharp" style="color: green;"></ion-icon>
+                                <p>8.1/10 &ThinSpace; 49k votes</p>
+                            </div>
+                        </div>
+                        <h3>Evil Dead Rise</h3>
+                        <p class="detail">Horror</p>
+                    </div>
+
+                    <div class="movie">
+                        <div class="card">
+                            <a href="sisu.html"><img src="sisu.jpg" class="card-img-sisu" ></a>
+                            <div class="card-body">
+                                <ion-icon name="heart-sharp"></ion-icon>
+                                <p>8.9/10 &ThinSpace; 33k likes</p>
+                            </div>
+                        </div>
+                        <h3>Sisu</h3>
+                        <p class="detail">Action/War</p>
+                    </div>
+
+                    <div class="movie">
+                        <div class="card">
+                            <a href="supermario.html"><img src="super mario.jpg" class="card-img-mario" ></a>
+                            <div class="card-body">
+                                <ion-icon name="thumbs-up-sharp" style="color: green;"></ion-icon>
+                                <p>8.7/10 &ThinSpace; 34k votes</p>
+                            </div>
+                        </div>
+                        <h3>The Super Mario Bros. Movie</h3>
+                        <p class="detail">Adventure/Animation</p>
+                    </div>
+
+                    <div class="movie">
+                        <div class="card">
+                            <img src="poster6.jpg" class="card-img" ></a>
+                            <div class="card-body">
+                                <ion-icon name="heart-sharp"></ion-icon>
+                                <p>9.2/10 &ThinSpace; 120k votes</p>
+                            </div>
+                        </div>
+                        <h3>Sita Ramam</h3>
+                        <p class="detail">Action/Drama/Romantic</p>
+                    </div>
+
+                    <div class="movie">
+                        <div class="card">
+                            <a href="varisu.html"><img src="Varisu.jpg" class="card-img-varisu" alt=""></a>
+                            <div class="card-body">
+                                <ion-icon name="thumbs-up-sharp" style="color: green;"></ion-icon>
+                                <p>7.5/10 &ThinSpace; 30k votes</p>
+                            </div>
+                        </div>
+                        <h3>Varisu</h3>
+                        <p class="detail">Action/Drama</p>
+                    </div>
+
+                    <div class="movie">
+                        <div class="card">
+                            <a href="virupaksha.html"><img src="Virupaksha.jpg" class="card-img-viru" alt=""></a>
+                            <div class="card-body">
+                                <ion-icon name="heart-sharp"></ion-icon>
+                                <p>8.0/10 &ThinSpace; 22k likes</p>
+                            </div>
+                        </div>
+                        <h3>Virupaksha</h3>
+                        <p class="detail">Action/Mystery/Thriller</p>
+                    </div>
+
+                    <div class="movie">
+                        <div class="card">
+                            <a href="pathuthala.html"><img src="paththala.jpg" class="card-img-pathu" alt=""></a>
+                            <div class="card-body">
+                                <ion-icon name="thumbs-up-sharp" style="color: green;"></ion-icon>
+                                <p>8.9/10 &ThinSpace; 111k votes</p>
+                            </div>
+                        </div>
+                        <h3>Pathu Thala</h3>
+                        <p class="detail">Action/Crime/Drama</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <h1 class="title-enter">The Best of Entertainment</h1>
+            <div class="enter-list">
+                <div class="enter-container">
+
+                    <div class="card">
+                        <img src="enter1.webp" class="card-img" alt="">
+                    </div>
+
+                    <div class="card">
+                        <img src="enter2.webp" class="card-img" alt="">
+                    </div>
+
+                    <div class="card">
+                        <img src="enter3.webp" class="card-img" alt="">
+                    </div>
+
+                    <div class="card">
+                        <img src="enter4.webp" class="card-img" alt="">
+                    </div>
+
+                    <div class="card">
+                        <img src="enter5.webp" class="card-img" alt="">
+                    </div>
+
+                    <div class="card">
+                        <img src="enter6.webp" class="card-img" alt="">
+                    </div>
+
+                    <div class="card">
+                        <img src="enter7.webp" class="card-img" alt="">
+                    </div>
+
+                    <div class="card">
+                        <img src="enter8.webp" class="card-img" alt="">
+                    </div>
+
+                    <div class="card">
+                        <img src="enter9.webp" class="card-img" alt="">
+                    </div>
+
+                    <div class="card">
+                        <img src="enter10.webp" class="card-img" alt="">
+                    </div>
+
+                    <div class="card">
+                        <img src="enter11.webp" class="card-img" alt="">
+                    </div>
+
+                    <div class="card">
+                        <img src="enter12.webp" class="card-img" alt="">
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <!-- End content -->
+
+    </div>
+    <!-- End wrapper -->
+
+</body>
+
+</html>
